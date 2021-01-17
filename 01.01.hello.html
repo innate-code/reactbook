@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hello React</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<div id="app">
+		<!-- здесь будет отображено ваше приложение -->
+	</div>
+<script src="build/react.js"></script>
+<script src="build/react-dom.js"></script>
+	<script>
+		ReactDOM.render(
+			React.DOM.h1(null, "Hello World!"),
+			document.getElementById("app")
+			);
+	</script>
+	<!-- Обратите внимание на разницу между React.DOM и ReactDOM. -->
+	<!-- Первое выражение относиться к числу готовых к использованию HTML - элементов -->
+	<!-- А второе является способом отображения приложения в браузере(подумайте о вызове метода ReactDOM.render()) -->
+	<!-- Посмотрим на параметры, получаемые всеми методами React.DOM.*. -->
+	<script>
+		ReactDOM.render(
+			React.DOM.h1(
+				{id: "my-heading"},
+					React.DOM.span(null,
+						React.DOM.em(null, "Hell"),
+									"o"
+								),
+					" world!"
+				),
+			document.getElementById("app")
+		); // код вашего приложения	
+	</script>
+</body>
+</html>
