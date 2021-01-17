@@ -1,0 +1,19 @@
+// Пример неработоспособного кода
+
+React.DOM.h1(
+	{
+		class:"pretty",
+		for: "me",
+	},
+	"Hello World!"
+);
+
+// Пример работоспособного кода
+
+React.DOM.h1(
+	{
+		className: "pretty",
+		htmlFor: "me",
+	},
+	"Hello World!"
+);
